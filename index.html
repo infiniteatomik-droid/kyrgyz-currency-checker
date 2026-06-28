@@ -1,58 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <style>
-    .todo-cont{
-        max-width: 400px;
-        border-radius: 10px;
-        margin: 50px auto;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-        background-color: rgb(60, 212, 149);
-        padding: 20px;
-    }
-    input{
-            width: 50%;
-            padding: 10px;
-            border-radius: 15px;
-            border: 1px solid #ccc;
-        }
-    button{
-        width: 25%;
-        padding: 10px;
-        border: none;
-        border-radius: 10px;
-        background-color:cyan;
-        cursor: pointer;
-    }
-    ul{
-        list-style: none;
-        padding: 0;
-    }
-    li{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        padding: 7px;
-        
-        margin-top: 10px;
-        border-radius: 15px;
-    }
-    .completed{
-        text-decoration: line-through;
-        opacity: 0.6;
-    }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Курс валют</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .crypto-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 280px;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        .currency-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .currency-row:last-child {
+            border-bottom: none;
+        }
+        .currency-name {
+            font-weight: bold;
+            color: #555;
+        }
+        .currency-value {
+            color: #2c3e50;
+            font-variant-numeric: tabular-nums;
+        }
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error-message {
+            color: #e74c3c;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <div class="todo-cont">
-    <input type="text" id="input" placeholder="Write something">
-    <button id="btn">Добавить</button>
-    <ul id="ul"></ul>
+
+    <div class="crypto-container">
+        <h2>Курсы валют</h2>
+
+        <div id="loader" class="loader"></div>
+        
+        <div id="result"></div>
+        
+        <div class="currency-row">
+            <span class="currency-name">🇺🇸 USD</span>
+            <span class="currency-value" id="usd">—</span>
+        </div>
+        
+        <div class="currency-row">
+            <span class="currency-name">🇪🇺 EUR</span>
+            <span class="currency-value" id="eur">—</span>
+        </div>
+        
+        <div class="currency-row">
+            <span class="currency-name">🇷🇺 RUB</span>
+            <span class="currency-value" id="rub">—</span>
+        </div>
     </div>
-    <script src="todoList.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>

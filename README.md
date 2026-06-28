@@ -2,9 +2,6 @@
 
 A lightweight and responsive web application that displays the current exchange rates for USD, EUR, and RUB against the Kyrgyz Som (KGS) in real-time.
 
-## 🚀 Live Demo
-*You can add your GitHub Pages link here later*
-
 ## ✨ Features
 * **Real-time Data:** Fetches up-to-date currency conversion rates directly from an external API.
 * **Advanced Async/Await:** Implements clean asynchronous JavaScript logic for seamless data handling.
