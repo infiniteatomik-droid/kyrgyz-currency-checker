@@ -10,7 +10,8 @@ async function getCurrencies() {
     if(!response.ok) { 
       throw new Error(`Ошибка сети: ${response.status}`) 
     } 
-    const data = await response.json() 
+    const data = await response.json()
+    console.log(data)
     
     if (data.result === "success") {
       renderRates(data.conversion_rates) 
