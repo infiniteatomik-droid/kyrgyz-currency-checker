@@ -22,6 +22,6 @@ A lightweight and responsive web application that displays the current exchange 
 ## 🔧 How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone https://github.com/infiniteatomik-droid/kyrgyz-currency-checker
+   git clone https://github.com/infiniteatomik-droid/kyrgyz-currency-checker.git
    ```
 2. Open `index.html` in your favorite browser.
