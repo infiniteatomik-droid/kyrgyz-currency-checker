@@ -2,6 +2,8 @@
 
 A lightweight and responsive web application that displays the current exchange rates for USD, EUR, and RUB against the Kyrgyz Som (KGS) in real-time.
 
+https://infiniteatomik-droid.github.io/kyrgyz-currency-checker/
+
 ## ✨ Features
 * **Real-time Data:** Fetches up-to-date currency conversion rates directly from an external API.
 * **Advanced Async/Await:** Implements clean asynchronous JavaScript logic for seamless data handling.
