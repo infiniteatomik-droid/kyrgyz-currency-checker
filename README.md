@@ -1,30 +1,26 @@
-# 🇰🇬 Kyrgyz Currency Checker
+# Kyrgyz Currency Checker 🇰🇬💳
 
-A lightweight and responsive web application that displays the current exchange rates for USD, EUR, and RUB against the Kyrgyz Som (KGS) in real-time.
+A lightweight, high-performance web application that fetches real-time currency exchange rates from an external API, calculates their value relative to the Kyrgyz Som (KGS), and displays them with two-decimal precision.
 
-🚀 Live Demo
-https://infiniteatomik-droid.github.io/kyrgyz-currency-checker/
+##  Live Demo
+[View the Live Application](https://infiniteatomik-droid.github.io/kyrgyz-currency-checker/)
 
-## ✨ Features
-* **Real-time Data:** Fetches up-to-date currency conversion rates directly from an external API.
-* **Advanced Async/Await:** Implements clean asynchronous JavaScript logic for seamless data handling.
-* **Robust Error Handling:** Features deep network error validation using `if (!response.ok)` and `try...catch...finally` structures to ensure a bulletproof user experience.
-* **Smooth UI/UX:** Includes a CSS-animated loading spinner (loader) that manages state dynamically during API calls.
-* **Fail-Safe Design:** Safely updates individual DOM elements and provides clear error feedback to the user if the server goes down.
+##  Features
+- **Real-Time Updates:** Pulls fresh, reliable data instantly using `fetch` from ExchangeRate-API.
+- **Key Currencies Tracked:** Dynamically converts and displays current rates for USD, EUR, RUB, and KZT into KGS.
+- **Robust Architecture:** Zero runtime errors thanks to strict, custom-designed TypeScript types.
+- **Modern Build Pipeline:** Powered by Vite for lightning-fast bundling, Hot Module Replacement (HMR), and clean production builds.
+- **Automated CI/CD:** Fully integrated with GitHub Actions for automated building and zero-downtime deployment to GitHub Pages.
 
-## 🛠️ Tech Stack
-* **HTML5** & **CSS3** (Flexbox, custom `@keyframes` animations)
-* **Vanilla JavaScript** (ES6+, Fetch API, Async/Await)
-* **ExchangeRate-API** (Dynamic currency data source)
+##  Tech Stack
+- **Core:** HTML5, CSS3, Modern JavaScript (ESNext)
+- **Language:** TypeScript (Strict Mode)
+- **Build Tool:** Vite
+- **Hosting & CI/CD:** GitHub Pages + GitHub Actions Workflow
 
-## 📖 What I Practiced in This Project
-1. **Asynchronous JS Flow:** Learned how to correctly stop loaders in the `finally` block regardless of the request outcome.
-2. **API Status Validation:** Handled hidden API issues by validating responses manually instead of relying solely on generic network catches.
-3. **DOM Manipulation:** Dynamically rendered formatted values and injected failure states without breaking the core layout.
-
-## 🔧 How to Run Locally
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/infiniteatomik-droid/kyrgyz-currency-checker.git
-   ```
-2. Open `index.html` in your favorite browser.
+##  Refactoring Journey & Experience
+The main goal of this update was to elevate a legacy single-file Vanilla JS script into a scalable, production-ready frontend environment:
+1. **Infrastructure Upgrade:** Initialized `npm`, integrated Vite as a bundler, and added comprehensive `tsconfig.json` rules.
+2. **Strict Data Typings:** Created custom interfaces (`CurrencyApiResponse`, `ConversionRates`) to securely map incoming API data structures.
+3. **DOM Safety:** Wrapped all DOM element lookups with proper TypeScript generic types (`querySelector<HTMLElement>`) and type assertions to gracefully handle potential null values.
+4. **Feature Expansion:** Scaled up the application logic by embedding additional rendering support for the Kazakhstan Tenge (KZT).
