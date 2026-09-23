@@ -1,0 +1,27 @@
+{
+  "name": "kyrgyz-currency-checker",
+  "version": "1.0.0",
+  "description": "A lightweight and responsive web application that displays the current exchange rates for USD, EUR, and RUB against the Kyrgyz Som (KGS) in real-time.",
+  "main": "app.js",
+  "scripts": {
+  "dev": "vite",
+  "build": "tsc && vite build",
+  "preview": "vite preview"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infiniteatomik-droid/kyrgyz-currency-checker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/infiniteatomik-droid/kyrgyz-currency-checker/issues"
+  },
+  "homepage": "https://github.com/infiniteatomik-droid/kyrgyz-currency-checker#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
